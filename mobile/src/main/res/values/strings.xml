@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">American Sunsets</string>
+    <string name="config_activity_title">American Sunsets</string>
+
+    <string name="title_no_device_connected">No wearable device is currently connected.</string>
+    <string name="ok_no_device_connected">OK</string>
+    <string name="sun_animation_mode">Battery saving mode</string>
+    <string name="fluid_motion">Sun as seconds indicator</string>
+    <string name="battery_saving">Sun as hours indicator</string>
+
+    <string name="bay_bridge_name">San Francisco</string>
+    <string name="new_york_name">New York</string>
+    <string name="seattle_name">Seattle</string>
+    <string name="chicago_name">Chicago</string>
+    <string name="miami_name">Miami</string>
+    <string name="los_angeles_name">Los Angeles</string>
+    <string name="stlouis_name">St. Louis</string>
+
+    <string-array name="bitmap_face_array">
+        <item>@string/bay_bridge_name</item>
+        <item>@string/new_york_name</item>
+        <item>@string/seattle_name</item>
+        <item>@string/chicago_name</item>
+        <item>@string/miami_name</item>
+        <item>@string/los_angeles_name</item>
+        <item>@string/stlouis_name</item>
+    </string-array>
+</resources>

@@ -25,3 +25,13 @@ proguard/
 
 # Log Files
 *.log
+
+# Signing files
+.signing/
+ 
+# User-specific configurations
+.idea/
+.navigation/
+*.iml
+
+.DS_Store

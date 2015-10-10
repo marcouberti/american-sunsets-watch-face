@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="config_activity_background">#424242</color>
+    <color name="config_activity_header_text_color">#ffffff</color>
+    <color name="color_item_label_color">#ffffff</color>
+    <color name="color_item_circle_border_color">#ffffff</color>
+
+    <color name="time_date_color">#ffffff</color>
+
+    <color name="sun_color">#ffffff</color>
+
+    <array name="front_array">
+        <item>#ff2700</item>
+        <item>#000000</item>
+    </array>
+
+    <array name="sky_array">
+        <item>#ffffff</item>
+        <item>#fff700</item>
+        <item>#f95d1f</item>
+        <item>#f2111b</item>
+        <item>#4e1e6d</item>
+        <item>#052170</item>
+    </array>
+
+</resources>
