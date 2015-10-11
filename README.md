@@ -1,6 +1,5 @@
 # American Sunsets Watch Face
 
-----------
 Interactive and animated Android Wear watch face with stunning sunlight effects.
 - Ambient mode
 - Battery saving mode
