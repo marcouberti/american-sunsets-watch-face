@@ -46,7 +46,6 @@ public class CustomCircledImageView extends CircledImageView {
     }
 
     private void initPaint(Context ctx){
-        //setBitmapResource(R.drawable.preview_africa);
         paint.setAntiAlias(true);
         paint.setFilterBitmap(true);
         circlePaint.setAntiAlias(true);
@@ -78,11 +77,6 @@ public class CustomCircledImageView extends CircledImageView {
         if(front!= null) {
             canvas.drawBitmap(front, new Rect(0, 0, front.getWidth(), front.getHeight()), new Rect(0, 0, this.getMeasuredWidth(), this.getMeasuredWidth()), paint);
         }
-/*
-        float R = this.getCircleRadius();
-        if(R > this.getMeasuredWidth()/2) R = this.getMeasuredWidth()/2;
-        canvas.drawCircle(this.getMeasuredWidth()/2, this.getMeasuredHeight()/2, R, circlePaint);
-        */
     }
 
 

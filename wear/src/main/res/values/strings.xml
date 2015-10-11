@@ -3,7 +3,7 @@
     <string name="wear_config_name">American Sunsets</string>
     <string name="choose_image">Image</string>
     <string name="background_gradients">Configure</string>
-    <string name="sfondo">Image...</string>
+    <string name="image">Image...</string>
     <string name="fluid_motion">Fluid motion (high battery usage)</string>
     <string name="battery_saving">Battery saving</string>
 

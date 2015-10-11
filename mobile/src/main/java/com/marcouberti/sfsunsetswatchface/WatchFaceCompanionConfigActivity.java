@@ -32,19 +32,12 @@ import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.Wearable;
 
-/**
- * The phone-side config activity for {@code DigitalWatchFaceService}. Like the watch-side config
- * activity ({@code DigitalWatchFaceWearableConfigActivity}), allows for setting the background
- * color. Additionally, enables setting the color for hour, minute and second digits.
- */
 public class WatchFaceCompanionConfigActivity extends Activity
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         ResultCallback<DataApi.DataItemResult>,DataApi.DataListener {
     private static final String TAG = "DigitalWatchFaceConfig";
 
     // TODO: use the shared constants (needs covering all the samples with Gradle build model)
-    //private static final String KEY_BACKGROUND_COLOR = "BACKGROUND_COLOR";
-    //private static final String PATH_WITH_FEATURE = "/watch_face_config/Digital";
 
     private GoogleApiClient mGoogleApiClient;
     private String mPeerId;
@@ -95,19 +88,6 @@ public class WatchFaceCompanionConfigActivity extends Activity
                 finish();
             }
         });
-        /*
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.action_refresh) {
-                    if(dashboardFragment != null) {
-                        ((DashboardFragment)dashboardFragment).reloadRobotList(true);
-                    }
-                }
-                return true;
-            }
-        });
-        */
 
         previewView = (CustomCircledImageView)findViewById(R.id.gradient);
         previewView.setBitmapResource(R.drawable.preview_sf);
@@ -118,7 +98,6 @@ public class WatchFaceCompanionConfigActivity extends Activity
         animator.setSupportsChangeAnimations(false);//no animation for changes
         recyclerView.setItemAnimator(animator);
         robotLayoutManager = new LinearLayoutManager(this);
-        //robotLayoutManager = new GridLayoutManager(getActivity(),2);
         recyclerView.setLayoutManager(robotLayoutManager);
         adapter = new GradientAdapter();
         recyclerView.setAdapter(adapter);
@@ -186,20 +165,6 @@ public class WatchFaceCompanionConfigActivity extends Activity
             }
         });
 
-        /*
-        NatureGradientsWatchFaceUtil.fetchConfigDataMap(mGoogleApiClient,
-                new NatureGradientsWatchFaceUtil.FetchConfigDataMapCallback() {
-                    @Override
-                    public void onConfigDataMapFetched(DataMap startupConfig) {
-                        // If the DataItem hasn't been created yet or some keys are missing,
-                        // use the default values.
-                        NatureGradientsWatchFaceUtil.putConfigDataItem(mGoogleApiClient, startupConfig);
-
-                        updateUiForConfigDataMap(startupConfig);
-                    }
-                }
-        );
-        */
     }
 
     @Override // ResultCallback<DataApi.DataItemResult>

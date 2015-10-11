@@ -36,10 +36,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.Wearable;
 
-/**
- * The watch-side config activity for {@link SunsetsWatchFace}, which allows for setting the
- * background color.
- */
 public class SunsetsBackgroundWearableConfigActivity extends Activity implements
         WearableListView.ClickListener, WearableListView.OnScrollListener {
     private static final String TAG = "SunsetsBackground";

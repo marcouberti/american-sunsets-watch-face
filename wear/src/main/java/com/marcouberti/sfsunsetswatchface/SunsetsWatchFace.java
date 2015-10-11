@@ -277,7 +277,7 @@ public class SunsetsWatchFace extends CanvasWatchFaceService {
 
 
             shaderBackground = new RadialGradient(
-                    (int)X, (int)Y, bounds.width(),//TODO il pivot X e Y deve essere il SOLE
+                    (int)X, (int)Y, bounds.width(),
                     frontGradient,
                     frontOffset,
                     Shader.TileMode.MIRROR);
@@ -285,7 +285,7 @@ public class SunsetsWatchFace extends CanvasWatchFaceService {
             mBackgroundPaint.setShader(shaderBackground);
 
             shaderSky = new RadialGradient(
-                    (int)X, (int)Y, bounds.width(),//TODO il pivot X e Y deve essere il SOLE
+                    (int)X, (int)Y, bounds.width(),
                     skyGradient,
                     skyOffset,
                     Shader.TileMode.MIRROR);
@@ -353,7 +353,6 @@ public class SunsetsWatchFace extends CanvasWatchFaceService {
                 int dateLeft = (int) ((double) width / (double) 2 - (double) dateBounds.width() / (double) 2);
                 canvas.drawText(format, dateLeft, top + A_HEIGHT * 2, mDatePaint);
             } else if(INFO_DETAILS_MODE == 1) {
-                //int weekOfYear = Calendar.getInstance().get(Calendar.WEEK_OF_YEAR);
                 //DATE TEXT
                 Rect dateBounds = new Rect();
                 Locale current = getResources().getConfiguration().locale;
@@ -369,7 +368,8 @@ public class SunsetsWatchFace extends CanvasWatchFaceService {
                 //No data show
             }
         }
-boolean hide = false;
+
+        boolean hide = false;
         @Override
         public void onVisibilityChanged(boolean visible) {
             super.onVisibilityChanged(visible);

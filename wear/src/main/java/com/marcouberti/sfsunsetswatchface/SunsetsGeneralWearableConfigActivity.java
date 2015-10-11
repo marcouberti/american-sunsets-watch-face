@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.wearable.companion.WatchFaceCompanion;
 import android.support.wearable.view.BoxInsetLayout;
-import android.support.wearable.view.CircledImageView;
 import android.support.wearable.view.WearableListView;
 import android.util.Log;
 import android.view.View;
@@ -70,7 +69,7 @@ public class SunsetsGeneralWearableConfigActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_config);
-        colors = new String[]{getResources().getString(R.string.sfondo),getResources().getString(R.string.fluid_motion)};
+        colors = new String[]{getResources().getString(R.string.image),getResources().getString(R.string.fluid_motion)};
         mHeader = (TextView) findViewById(R.id.header);
         listView = (WearableListView) findViewById(R.id.color_picker);
         BoxInsetLayout content = (BoxInsetLayout) findViewById(R.id.content);
@@ -262,15 +261,7 @@ public class SunsetsGeneralWearableConfigActivity extends Activity implements
                 }
             });
         }else if (configKey.equals(SunsetsWatchFaceUtil.KEY_BACKGROUND_COLOR)) {
-            /*
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    previewResource = GradientsUtils.getBitmapResource(getApplicationContext(),value);
-                    listView.getAdapter().notifyItemRangeChanged(0,1);
-                }
-            });
-            */
+            //nothing to do
         } else {
             Log.w(TAG, "Ignoring unknown config key: " + configKey);
             return false;
@@ -416,8 +407,8 @@ public class SunsetsGeneralWearableConfigActivity extends Activity implements
         private void setColor(String cName) {
             mLabel.setText(cName);
             colorName = cName;
-            //cambio immagine
-            if(cName.equalsIgnoreCase(getResources().getString(R.string.sfondo))) {
+            //change thumb image
+            if(cName.equalsIgnoreCase(getResources().getString(R.string.image))) {
                 mColor.setBitmapResource(R.drawable.config_choose_image);
             }else if(cName.equalsIgnoreCase(getResources().getString(R.string.battery_saving))) {
                 mColor.setBitmapResource(R.drawable.config_battery_saving);

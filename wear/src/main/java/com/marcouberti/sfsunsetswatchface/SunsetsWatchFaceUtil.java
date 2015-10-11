@@ -1,19 +1,4 @@
 package com.marcouberti.sfsunsetswatchface;
-/*
- * Copyright (C) 2014 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 import android.graphics.Color;
 import android.net.Uri;
@@ -41,57 +26,11 @@ public final class SunsetsWatchFaceUtil {
     public static final String KEY_FLUID_MODE = "KEY_FLUID_MODE";
 
     /**
-     * The {@link DataMap} key for {@link SunsetsWatchFace} hour digits color name.
-     * The color name must be a {@link String} recognized by {@link Color#parseColor}.
-     */
-    public static final String KEY_HOURS_COLOR = "HOURS_COLOR";
-
-    /**
-     * The {@link DataMap} key for {@link SunsetsWatchFace} minute digits color name.
-     * The color name must be a {@link String} recognized by {@link Color#parseColor}.
-     */
-    public static final String KEY_MINUTES_COLOR = "MINUTES_COLOR";
-
-    /**
-     * The {@link DataMap} key for {@link SunsetsWatchFace} second digits color name.
-     * The color name must be a {@link String} recognized by {@link Color#parseColor}.
-     */
-    public static final String KEY_SECONDS_COLOR = "SECONDS_COLOR";
-
-    /**
      * The path for the {@link DataItem} containing {@link SunsetsWatchFace} configuration.
      */
-    public static final String PATH_WITH_FEATURE = "/watch_face_config/AfricanSunsets";
+    public static final String PATH_WITH_FEATURE = "/watch_face_config/american_sunsets";
 
-    /**
-     * Name of the default interactive mode background color and the ambient mode background color.
-     */
-    public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_BACKGROUND = "Black";
     public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_BACKGROUND = 0;
-
-    /**
-     * Name of the default interactive mode hour digits color and the ambient mode hour digits
-     * color.
-     */
-    public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_HOUR_DIGITS = "White";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_HOUR_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_HOUR_DIGITS);
-
-    /**
-     * Name of the default interactive mode minute digits color and the ambient mode minute digits
-     * color.
-     */
-    public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_MINUTE_DIGITS = "White";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_MINUTE_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_MINUTE_DIGITS);
-
-    /**
-     * Name of the default interactive mode second digits color and the ambient mode second digits
-     * color.
-     */
-    public static final String COLOR_NAME_DEFAULT_AND_AMBIENT_SECOND_DIGITS = "Gray";
-    public static final int COLOR_VALUE_DEFAULT_AND_AMBIENT_SECOND_DIGITS =
-            parseColor(COLOR_NAME_DEFAULT_AND_AMBIENT_SECOND_DIGITS);
 
     /**
      * Callback interface to perform an action with the current config {@link DataMap} for
@@ -103,10 +42,6 @@ public final class SunsetsWatchFaceUtil {
          * {@link SunsetsWatchFace}.
          */
         void onConfigDataMapFetched(DataMap config);
-    }
-
-    private static int parseColor(String colorName) {
-        return Color.parseColor(colorName.toLowerCase());
     }
 
     /**
